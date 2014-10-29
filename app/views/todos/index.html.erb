@@ -1,0 +1,11 @@
+<section class="todos">
+  <h1>Todos</h1>
+  <%= form_for Todo.new, method: :post, html: { as: 'Todo.Form'}, remote: true do |f| %>
+    <%= f.text_field :title, placeholder: "Add a todo" %>
+    <%= f.button 'Create' %>
+  <% end %>
+
+  <ol as="Todo.List">
+    <%= render @todos %>
+  </ol>
+</section>

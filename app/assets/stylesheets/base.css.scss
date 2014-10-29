@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: rgb(236, 240, 245);
+}
+
+body {
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
+}
+
+nav {
+  @include display(flex);
+  @include flex(0 0 60px);
+}
+
+main {
+  @include display(flex);
+  @include flex(1);
+  @include justify-content(center);
+}
+
+ol, ul {
+  list-style-type: none;
+}

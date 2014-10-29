@@ -1,0 +1,6 @@
+<li class='todo' data-oid="<%= todo.id%>">
+  <%= todo.title %>
+  <% unless todo.done? %>
+    <%= button_to "✓", todo_path(todo), method: :delete, remote: true %>
+  <% end %>
+</li>
